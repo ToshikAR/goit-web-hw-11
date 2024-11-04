@@ -71,6 +71,7 @@ async def search_contacts(
     contacts = await repositories_contacts.search_contacts(params, db)
     if contacts is None or not contacts:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="NOT FOUND")
+    print("err5")
     return contacts
 
 
